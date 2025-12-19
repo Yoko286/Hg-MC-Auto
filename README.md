@@ -1,52 +1,43 @@
 # Hg-MC-Auto: An End-to-End Self-Driving Pipeline for Mercury Isotope Analysis
-https://img.shields.io/badge/Python-3.9+-blue.svg
-https://img.shields.io/badge/License-MIT-green.svg
-https://img.shields.io/github/stars/Yoko286/Hg-MC-Auto
 
-Hg-MC-Auto is a comprehensive, intelligent pipeline for automated mercury isotope analysis by MC-ICP-MS, integrating robotic data extraction, expert-informed quality control, and machine learning diagnostics.
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/Yoko286/Hg-MC-Auto)](https://github.com/Yoko286/Hg-MC-Auto/stargazers)
 
-https://raw.githubusercontent.com/Yoko286/Hg-MC-Auto/docs/Graphicabstract.png
+**Hg-MC-Auto** is a comprehensive, intelligent pipeline for automated mercury isotope analysis by MC-ICP-MS, integrating robotic data extraction, expert-informed quality control, and machine learning diagnostics.
 
-✨ Features
-🔧 Automated Data Processing: Robotic export from proprietary software to structured formats
+![Graphic Abstract](https://raw.githubusercontent.com/Yoko286/Hg-MC-Auto/docs/Graphic%20abstract.png)
 
-📊 Intelligent Quality Control: Hierarchical ML models with 99.6% F1-score accuracy
+## ✨ Features
 
-🎯 Root Cause Diagnosis: Multi-class classification for anomaly identification
+- **🔧 Automated Data Processing**: Robotic export from proprietary software to structured formats
+- **📊 Intelligent Quality Control**: Hierarchical ML models with 99.6% F1-score accuracy
+- **🎯 Root Cause Diagnosis**: Multi-class classification for anomaly identification
+- **🖥️ User-Friendly Interface**: Interactive GUI with configurable options
+- **📈 Scalable Framework**: Modular design for extension to other isotope systems
+- **🔬 Expert-Validated**: Built on 27,000+ historical MC-ICP-MS measurements
 
-🖥️ User-Friendly Interface: Interactive GUI with configurable options
+## 📋 Table of Contents
 
-📈 Scalable Framework: Modular design for extension to other isotope systems
+1. [Installation](#installation)
+2. [Quick Start](#quick-start)
+3. [Architecture](#architecture)
+4. [Project Structure](#project-structure)
+5. [Usage Guide](#usage-guide)
+6. [Models](#models)
+7. [Citation](#citation)
+8. [Contact](#contact)
 
-🔬 Expert-Validated: Built on 27,000+ historical MC-ICP-MS measurements
+## 🚀 Installation
 
-📋 Table of Contents
-Installation
+### Prerequisites
+- Python 3.9 or higher
+- 8GB RAM minimum (16GB recommended for large datasets)
+- MC-ICP-MS raw data files (.dat and .log formats)
 
-Quick Start
+### Step-by-Step Setup
 
-Architecture
-
-Project Structure
-
-Usage Guide
-
-Models
-
-Citation
-
-Contact
-
-🚀 Installation
-Prerequisites
-Python 3.9 or higher
-
-8GB RAM minimum (16GB recommended for large datasets)
-
-MC-ICP-MS raw data files (.dat and .log formats)
-
-Step-by-Step Setup
-bash
+```bash
 # 1. Clone the repository
 git clone https://github.com/Yoko286/Hg-MC-Auto.git
 
@@ -68,7 +59,7 @@ python src/main.py
 🏗️ Architecture
 Hg-MC-Auto employs a three-tier architecture that transforms raw MC-ICP-MS data into quality-assured isotopic results:
 
-https://raw.githubusercontent.com/Yoko286/Hg-MC-Auto/docs/OverallArchitectureDiagram.png
+https://raw.githubusercontent.com/Yoko286/Hg-MC-Auto/docs/Overall%2520Architecture%2520Diagram.png
 
 Core Components
 Data Automation Layer
@@ -225,7 +216,7 @@ bibtex
 @article{zhou2025selfdriving,
   title={A Self-Driving Pipeline for Mercury Isotope Analysis: From Automated Data Acquisition to AI-Powered Quality Diagnosis},
   author={Zhou, Chufan and Huang, Qiang and Tang, Yang and Zhong, Ying and Feng, Xinbin},
-  journal={Analytical Chemistry},
+  journal={AC},
   year={2025},
   doi={10.xxxx/xxxxxx}
 }
