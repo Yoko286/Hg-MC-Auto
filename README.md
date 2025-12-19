@@ -38,38 +38,38 @@
 **Step-by-Step Setup**
 
 
-# 1. Clone the repository
+### 1. Clone the repository
 ```bash
 git clone https://github.com/Yoko286/Hg-MC-Auto.git
 ```
-# 2. Navigate to the project directory
+### 2. Navigate to the project directory
 ```bash
 cd Hg-MC-Auto
 ```
-# 3. Create and activate a virtual environment
+### 3. Create and activate a virtual environment
 ```bash
 python -m venv hg-auto-env
 ```
-# On Windows:
+### On Windows:
 ```bash
 hg-auto-env\Scripts\activate
 ```
-# On macOS/Linux:
+### On macOS/Linux:
 ```bash
 source hg-auto-env/bin/activate
 ```
-# 4. Install dependencies
+### 4. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
-# 5. Run the application
+### 5. Run the application
 ```bash
 python src/main.py
 ```
 🏗️ Architecture
 Hg-MC-Auto employs a three-tier architecture that transforms raw MC-ICP-MS data into quality-assured isotopic results:
 
-https://raw.githubusercontent.com/Yoko286/Hg-MC-Auto/docs/Overall%2520Architecture%2520Diagram.png
+![Overall Architecture Diagram](https://raw.githubusercontent.com/Yoko286/Hg-MC-Auto/docs/Overall%2520Architecture%2520Diagram.png)
 
 Core Components
 Data Automation Layer
