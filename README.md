@@ -69,7 +69,7 @@ python src/main.py
 🏗️ Architecture
 Hg-MC-Auto employs a three-tier architecture that transforms raw MC-ICP-MS data into quality-assured isotopic results:
 
-![Overall Architecture Diagram](https://raw.githubusercontent.com/Yoko286/Hg-MC-Auto/docs/Overall%2520Architecture%2520Diagram.png)
+![Overall Architecture Diagram](https://github.com/Yoko286/Hg-MC-Auto/blob/main/docs/Overall%20Architecture%20Diagram.png)
 
 Core Components
 Data Automation Layer
@@ -136,7 +136,9 @@ Hg-MC-Auto/
 Launching the Application
 After installation, run:
 
+```bash
 python src/main.py
+```
 
 You will see the interactive interface:
 
@@ -161,7 +163,7 @@ Merges with corresponding instrument log files
 Uses RPA for vendor software interaction
 
 Option 2: Isotope Calculation
-Calculates δ^202^Hg values relative to NIST SRM 3133
+Calculates δ202Hg values relative to NIST SRM 3133
 
 Computes mass-independent fractionation anomalies (Δ-values)
 
@@ -259,11 +261,11 @@ Guiyang, Guizhou 550081, China
 
 Chufan Zhou:
 📧 zhouchufan@mail.gyig.ac.cn
-🔗 ORCID: 0009-0008-0144-9017
+🔗 ORCID: [0009-0008-0144-9017](https://orcid.org/0009-0008-0144-9017)
 
 Qiang Huang (Corresponding Author):
 📧 huangqiang@mail.gyig.ac.cn
-🔗 ORCID: 0000-0003-1568-9042
+🔗 ORCID: [0000-0003-1568-9042](https://orcid.org/0000-0003-1568-9042)
 
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
