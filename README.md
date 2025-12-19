@@ -6,16 +6,16 @@
 
 **Hg-MC-Auto** is a comprehensive, intelligent pipeline for automated mercury isotope analysis by MC-ICP-MS, integrating robotic data extraction, expert-informed quality control, and machine learning diagnostics.
 
-![Graphic Abstract](https://raw.githubusercontent.com/Yoko286/Hg-MC-Auto/docs/Graphic%20abstract.png)
+![Graphic Abstract](https://github.com/Yoko286/Hg-MC-Auto/blob/main/docs/Graphic%20abstract.png)
 
 ## ✨ Features
 
-- **🔧 Automated Data Processing**: Robotic export from proprietary software to structured formats
-- **📊 Intelligent Quality Control**: Hierarchical ML models with 99.6% F1-score accuracy
-- **🎯 Root Cause Diagnosis**: Multi-class classification for anomaly identification
-- **🖥️ User-Friendly Interface**: Interactive GUI with configurable options
-- **📈 Scalable Framework**: Modular design for extension to other isotope systems
-- **🔬 Expert-Validated**: Built on 27,000+ historical MC-ICP-MS measurements
+- **Automated Data Processing**: Robotic export from proprietary software to structured formats
+- **Intelligent Quality Control**: Hierarchical ML models with 99.6% F1-score accuracy
+- **Root Cause Diagnosis**: Multi-class classification for anomaly identification
+- **User-Friendly Interface**: Interactive GUI with configurable options
+- **Scalable Framework**: Modular design for extension to other isotope systems
+- **Expert-Validated**: Built on 27,000+ historical MC-ICP-MS measurements
 
 ## 📋 Table of Contents
 
@@ -30,32 +30,42 @@
 
 ## 🚀 Installation
 
-### Prerequisites
+**Prerequisites**
 - Python 3.9 or higher
 - 8GB RAM minimum (16GB recommended for large datasets)
 - MC-ICP-MS raw data files (.dat and .log formats)
 
-### Step-by-Step Setup
+**Step-by-Step Setup**
 
-```bash
+
 # 1. Clone the repository
+```bash
 git clone https://github.com/Yoko286/Hg-MC-Auto.git
-
+```
 # 2. Navigate to the project directory
+```bash
 cd Hg-MC-Auto
-
+```
 # 3. Create and activate a virtual environment
+```bash
 python -m venv hg-auto-env
+```
 # On Windows:
+```bash
 hg-auto-env\Scripts\activate
+```
 # On macOS/Linux:
+```bash
 source hg-auto-env/bin/activate
-
+```
 # 4. Install dependencies
+```bash
 pip install -r requirements.txt
-
+```
 # 5. Run the application
+```bash
 python src/main.py
+```
 🏗️ Architecture
 Hg-MC-Auto employs a three-tier architecture that transforms raw MC-ICP-MS data into quality-assured isotopic results:
 
@@ -86,8 +96,8 @@ Configurable quality thresholds
 
 Comprehensive reporting
 
-📁 Project Structure
-
+## 📁 Project Structure
+```bash
 Hg-MC-Auto/
 │
 ├── data/                     # Sample datasets for testing
@@ -121,7 +131,8 @@ Hg-MC-Auto/
 ├── requirements.txt                   # Python dependencies
 ├── LICENSE                            # MIT License
 └── README.md                          # This file
-📖 Usage Guide
+```
+## 📖 Usage Guide
 Launching the Application
 After installation, run:
 
@@ -129,7 +140,7 @@ python src/main.py
 
 You will see the interactive interface:
 
-
+```bash
 Welcome to Hg_MC_Auto!
 ============================================================
 
@@ -140,7 +151,8 @@ Please select a task:
 4. Classify data using a machine learning model
 5. Train your own machine learning expert model
 0. Exit
-Task Options Explained
+```
+## Task Options Explained
 Option 1: Automated Data Export
 Converts proprietary .dat files to structured CSV format
 
@@ -176,7 +188,7 @@ Supports both binary and multi-class classification
 
 Adapts to different instrument performances and sample matrices
 
-🤖 Models
+## 🤖 Models
 Binary Classification Models
 Purpose: Distinguish between "Normal" and "Abnormal" measurements
 
@@ -201,7 +213,7 @@ Categories:
 
 Features: Internal precision metrics, concentration mismatch ratios
 
-📊 Performance Highlights
+## 📊 Performance Highlights
 Metric	Binary Classification	Multi-class Diagnosis
 Accuracy	99.61%	99.84%
 F1-Score	0.9960	0.9909 (balanced)
@@ -209,7 +221,7 @@ Recall (Normal)	99.8%	-
 AUC	0.999-1.0	-
 Based on validation with 27,942 historical measurements
 
-📝 Citation
+## 📝 Citation
 If you use Hg-MC-Auto in your research, please cite:
 
 bibtex
@@ -220,7 +232,7 @@ bibtex
   year={2025},
   doi={10.xxxx/xxxxxx}
 }
-🤝 Contributing
+## 🤝 Contributing
 We welcome contributions! Please:
 
 Fork the repository
@@ -233,14 +245,14 @@ Ensure code follows PEP 8 guidelines
 
 Include tests for new functionality
 
-🐛 Issues and Support
+## 🐛 Issues and Support
 Bug Reports: Use the GitHub Issues page
 
 Questions: Check the Wiki or open a discussion
 
 Feature Requests: Submit via GitHub Issues with the "enhancement" label
 
-📧 Contact
+## 📧 Contact
 State Key Laboratory of Environmental Geochemistry
 Institute of Geochemistry, Chinese Academy of Sciences
 Guiyang, Guizhou 550081, China
