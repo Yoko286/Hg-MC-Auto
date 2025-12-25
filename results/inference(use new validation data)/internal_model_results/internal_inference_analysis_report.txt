@@ -1,0 +1,27 @@
+INTERNAL GEOCHEMICAL MACHINE LEARNING INFERENCE REPORT
+============================================================
+Generated on: 2025-12-10 19:12:11
+Model used: RandomForestClassifier
+Total samples processed: 726
+Samples predicted: 639
+Samples filtered out (sample data): 87
+============================================================
+
+Total samples predicted: 639
+
+Prediction Distribution:
+  Other reasons, retesting is recommended: 532 samples (83.3%)
+  It might be an abnormal concentration: 100 samples (15.6%)
+  Possible instrument instability: 4 samples (0.6%)
+  It might be an abnormal concentration; Possible instrument instability: 3 samples (0.5%)
+
+Confidence Analysis:
+  Average Confidence: 0.972
+  Median Confidence: 0.976
+  Low Confidence Predictions (<0.7): 2 (0.3%)
+
+R-THg(%) Analysis by Predicted Cause:
+  Other reasons, retesting is recommended: 2.874
+  It might be an abnormal concentration: 21.142
+  It might be an abnormal concentration; Possible instrument instability: 21.022
+  Possible instrument instability: 1.134

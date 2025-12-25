@@ -1,5 +1,0 @@
-StdErr(abs)202Hg/198Hg
-StdErr(abs)201Hg/198Hg
-StdErr(abs)200Hg/198Hg
-StdErr(abs)199Hg/198Hg
-R-THg(%)

@@ -1,0 +1,114 @@
+GEOCHEMICAL MACHINE LEARNING ANALYSIS REPORT (ENHANCED FEATURES)
+==================================================
+Generated on: 2025-12-17 13:30:20
+Feature option: enhanced
+==================================================
+
+==================================================
+DATA OVERVIEW
+==================================================
+Original dataset shape: (12469, 63)
+Anomaly dataset shape: (9546, 63)
+Features available: 63
+Target variable: 'Cause of the anomaly'
+Feature option selected: enhanced
+
+==================================================
+FEATURE SELECTION
+==================================================
+Feature option: enhanced
+Selected features: ['StdErr(abs)202Hg/198Hg', 'StdErr(abs)201Hg/198Hg', 'StdErr(abs)200Hg/198Hg', 'StdErr(abs)199Hg/198Hg', 'R-THg(%)', 'RSD_202Hg', 'RSD_201Hg', 'RSD_200Hg', 'RSD_199Hg', 'StdErr_ratio_199_202', 'StdErr_ratio_201_202', 'Total_StdErr', 'Data_Quality_Score', 'CV_202Hg', 'CV_201Hg']
+Total features: 15
+Missing values information:
+  StdErr_ratio_199_202: 17 missing values (0.18%)
+  StdErr_ratio_201_202: 17 missing values (0.18%)
+  CV_202Hg: 10 missing values (0.10%)
+  CV_201Hg: 10 missing values (0.10%)
+Final feature set: ['StdErr(abs)202Hg/198Hg', 'StdErr(abs)201Hg/198Hg', 'StdErr(abs)200Hg/198Hg', 'StdErr(abs)199Hg/198Hg', 'R-THg(%)', 'RSD_202Hg', 'RSD_201Hg', 'RSD_200Hg', 'RSD_199Hg', 'StdErr_ratio_199_202', 'StdErr_ratio_201_202', 'Total_StdErr', 'Data_Quality_Score', 'CV_202Hg', 'CV_201Hg']
+
+==================================================
+CLASS DISTRIBUTION
+==================================================
+  1. Other reasons, retesting is recommended: 7133 samples (74.7%)
+  2. It might be an abnormal concentration: 2029 samples (21.3%)
+  3. Possible instrument instability: 280 samples (2.9%)
+  4. It might be an abnormal concentration; Possible instrument instability: 104 samples (1.1%)
+Imbalance ratio: 68.6:1
+Severe class imbalance detected - using cost-sensitive learning
+
+==================================================
+ABSOLUTE R-THG STATISTICS
+==================================================
+Average absolute R-THg(%) by anomaly type:
+It might be an abnormal concentration: 27.869
+Other reasons, retesting is recommended: 3.173
+It might be an abnormal concentration; Possible instrument instability: 36.459
+Possible instrument instability: 2.873
+
+==================================================
+DATA SPLITTING
+==================================================
+Training set size: 7636 samples
+Test set size: 1910 samples
+Class distribution after splitting:
+  It might be an abnormal concentration: Train 1623, Test 406
+  It might be an abnormal concentration; Possible instrument instability: Train 83, Test 21
+  Other reasons, retesting is recommended: Train 5706, Test 1427
+  Possible instrument instability: Train 224, Test 56
+
+==================================================
+CLASS WEIGHTS
+==================================================
+  It might be an abnormal concentration: 1.18
+  It might be an abnormal concentration; Possible instrument instability: 23.00
+  Other reasons, retesting is recommended: 0.33
+  Possible instrument instability: 8.52
+
+==================================================
+MODEL PERFORMANCE SUMMARY
+==================================================
+
+Random Forest:
+  Train Accuracy: 1.0000
+  Test Accuracy: 0.9979
+  Validation Accuracy: 0.9987
+  Balanced Accuracy: 0.9907
+
+SVM:
+  Train Accuracy: 0.8832
+  Test Accuracy: 0.8843
+  Validation Accuracy: 0.8705
+  Balanced Accuracy: 0.7579
+
+Logistic Regression:
+  Train Accuracy: 0.5587
+  Test Accuracy: 0.5707
+  Validation Accuracy: 0.5542
+  Balanced Accuracy: 0.5827
+
+==================================================
+FEATURE IMPORTANCE
+==================================================
+Top 5 most important features:
+  RSD_201Hg: 0.057 - Relative error, data stability indicator
+  StdErr(abs)201Hg/198Hg: 0.063 - Instrument measurement precision indicator
+  Total_StdErr: 0.068 - Instrument measurement precision indicator
+  Data_Quality_Score: 0.209 - Composite precision-accuracy quality score
+  R-THg(%): 0.300 - Data recovery rate, quality control core
+
+==================================================
+PREDICTION CONFIDENCE
+==================================================
+Average Confidence: 0.954
+Median Confidence: 0.965
+Low Confidence Samples (<0.7): 11
+
+==================================================
+BEST MODEL SELECTION
+==================================================
+Best Model: Random Forest
+Test Balanced Accuracy: 0.9907
+Test Accuracy: 0.9979
+Test Precision: 0.9979
+Test Recall: 0.9979
+Test F1-Score: 0.9979

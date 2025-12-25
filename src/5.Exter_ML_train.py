@@ -746,7 +746,7 @@ def plot_improved_results(all_results, X_test, y_test, top3_models_info, target_
     ax_left.set_xticks(x)
     abbr_names = [abbreviate_model_name(n) for n in model_names]
     ax_left.set_xticklabels(abbr_names, rotation=30, ha='right', fontsize=14, fontweight='bold')
-    ax_left.set_ylim(0, 1)
+    ax_left.set_ylim(0.5, 1)
     ax_left.set_ylabel('Test Macro F1', fontsize=16, fontweight='bold')
     ax_left.set_title('Model Performance (F1 Score)', fontsize=16, fontweight='bold')
     ax_left.grid(axis='y', alpha=0.3)
@@ -762,7 +762,7 @@ def plot_improved_results(all_results, X_test, y_test, top3_models_info, target_
                         color=colors[2], alpha=0.9, edgecolor='black', linewidth=1)
     ax_right.set_xticks(x)
     ax_right.set_xticklabels(abbr_names, rotation=30, ha='right', fontsize=14, fontweight='bold')
-    ax_right.set_ylim(0, 1)
+    ax_right.set_ylim(0.5, 1)
     ax_right.set_ylabel('Normal class Recall', fontsize=16, fontweight='bold')
     ax_right.set_title('Normal Class Recall', fontsize=16, fontweight='bold')
     ax_right.axhline(0.7, color='red', linestyle='--', linewidth=2, alpha=0.7)
@@ -916,42 +916,31 @@ def plot_improved_results(all_results, X_test, y_test, top3_models_info, target_
     ax_roc.grid(alpha=0.3)
 
     # Stability scatter plot: x=overfitting gap, y=Test F1 (Top 8)
-    of_gaps = [all_results[n]['Overfitting_Gap'] for n in model_names]
-    test_f1s = [all_results[n]['Test']['F1_Macro'] for n in model_names]
+    top8_model_names = [n for n, _ in top8]
+    top8_of_gaps = [all_results[n]['Overfitting_Gap'] for n in top8_model_names]
+    top8_test_f1s = [all_results[n]['Test']['F1_Macro'] for n in top8_model_names]
+    top8_cv_stds = [all_results[n]['CV_Std'] for n in top8_model_names]
     
     # Create scatter plot with color gradient and LARGER size based on CV std
-    cv_stds_scaled = [std * 800 for std in cv_stds]  # Scale for visibility
+    cv_stds_scaled = [std * 800 for std in top8_cv_stds]  # Scale for visibility
     base_size = 150  # Increased base size for better visibility
     
-    rank_numbers = np.arange(1, 9) 
-    
-    sc = ax_stab.scatter(of_gaps, test_f1s, 
-                        c=rank_numbers, 
-                        cmap='viridis', 
-                        s=[base_size + size for size in cv_stds_scaled],  # Increased base size
+    sc = ax_stab.scatter(top8_of_gaps, top8_test_f1s, 
+                        c='red',
+                        s=[base_size + size for size in cv_stds_scaled],
                         alpha=0.8, 
                         edgecolors='black', 
-                        linewidth=2,  # Thicker border
+                        linewidth=1,  # Thicker border
                         zorder=5)  # Ensure points are on top
     
-    # Label the points with ranking numbers (1-8)
-    for i, (x_val, y_val, txt) in enumerate(zip(of_gaps, test_f1s, model_names)):
-        # Use ranking numbers (1-based)
-        rank_num = i + 1
-        
-        # Set text color and size based on ranking
-        if rank_num <= 3:
-            text_color = 'white'  # The top three use white, which is more eye-catching.
-            font_weight = 'bold'
-            font_size = 11
-        else:
-            text_color = 'black'
-            font_weight = 'normal'
-            font_size = 10
-        
-        # Label rank numbers at the center of the points
-        ax_stab.text(x_val, y_val, str(rank_num),
-                    ha='center', va='center',
+    # Replace the numbers representing each point with the model names, enlarge the font, and place it to the right of the point
+    for i, (x_val, y_val, model_name) in enumerate(zip(top8_of_gaps, top8_test_f1s, top8_model_names)):
+        short_model_name = abbreviate_model_name(model_name)
+        font_size = 14
+        font_weight = 'bold'
+        text_color = 'black'
+        ax_stab.text(x_val + 0.004, y_val, short_model_name,
+                    ha='left', va='center',
                     fontsize=font_size, 
                     fontweight=font_weight,
                     color=text_color,
@@ -978,7 +967,7 @@ def plot_improved_results(all_results, X_test, y_test, top3_models_info, target_
     ax_stab.set_title('Model Stability Analysis', fontsize=15, fontweight='bold')
     ax_stab.grid(alpha=0.3, zorder=0)
     # Enlarge and bold the legend of the stability chart (small box)
-    stab_legend = ax_stab.legend(fontsize=15, loc='upper left', framealpha=0.9, 
+    stab_legend = ax_stab.legend(fontsize=15, loc='upper right', framealpha=0.9, 
                             frameon=True, edgecolor='black')
     # Set the legend title (if needed)
     # stab_legend.set_title('Legend', prop={'size': 12, 'weight': 'bold'})
@@ -986,22 +975,9 @@ def plot_improved_results(all_results, X_test, y_test, top3_models_info, target_
     for text in stab_legend.get_texts():
         text.set_fontweight('bold')
     
-    # Add colorbar with proper ticks for 1-8 ranking
-    cbar = fig3.colorbar(sc, ax=ax_stab)
-    cbar.set_label('Model Rank (1 = Best)', fontsize=14, fontweight='bold')
-    # Enlarge and bold the colorbar tick labels
-    cbar.ax.tick_params(labelsize=12)  # Enlarge colorbar tick labels
-    # Bold the colorbar tick labels
-    for label in cbar.ax.get_yticklabels():
-        label.set_fontweight('bold')
-    
-    # Set the colorbar ticks to integers from 1 to 8
-    cbar.set_ticks(rank_numbers)
-    cbar.set_ticklabels([str(i) for i in rank_numbers])
-    
     # Adjust x-axis limits
-    x_min, x_max = min(of_gaps), max(of_gaps)
-    ax_stab.set_xlim([x_min - 0.1, x_max + 0.1]) 
+    x_min, x_max = min(top8_of_gaps), max(top8_of_gaps)
+    ax_stab.set_xlim([x_min - 0.05, x_max + 0.15]) 
     
     fig3_path = os.path.join(results_dir, 'roc_and_stability_top8.png')
     fig3.savefig(fig3_path, dpi=600, bbox_inches='tight', facecolor='white')

@@ -1,0 +1,30 @@
+External Model - Machine Learning Prediction Statistics Report (Overall)
+============================================================
+
+Statistics for Normal predictions by label type
+Format: Mean ± 2SD (Range: Lower to Upper)
+
+3133:
+  d202(‰): 0.0023 ± 0.1025 (range: -0.1002 to 0.1048) [n=335]
+  D199(‰): -0.0003 ± 0.0479 (range: -0.0482 to 0.0476) [n=335]
+  D200(‰): -0.0011 ± 0.0472 (range: -0.0483 to 0.0461) [n=335]
+  D201(‰): -0.0010 ± 0.0547 (range: -0.0557 to 0.0538) [n=335]
+
+3177:
+  d202(‰): -0.5373 ± 0.1355 (range: -0.6728 to -0.4019) [n=43]
+  D199(‰): -0.0215 ± 0.0782 (range: -0.0997 to 0.0567) [n=43]
+  D200(‰): 0.0085 ± 0.0461 (range: -0.0376 to 0.0546) [n=43]
+  D201(‰): -0.0211 ± 0.0740 (range: -0.0952 to 0.0529) [n=43]
+
+8610:
+  d202(‰): No Normal predictions available
+  D199(‰): No Normal predictions available
+  D200(‰): No Normal predictions available
+  D201(‰): No Normal predictions available
+
+sample:
+  d202(‰): -0.7731 ± 1.6245 (range: -2.3976 to 0.8514) [n=663]
+  D199(‰): -0.0265 ± 0.6920 (range: -0.7185 to 0.6655) [n=663]
+  D200(‰): 0.0179 ± 0.1341 (range: -0.1162 to 0.1520) [n=663]
+  D201(‰): -0.0420 ± 0.5830 (range: -0.6249 to 0.5410) [n=663]
+

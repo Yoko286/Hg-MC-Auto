@@ -15,7 +15,7 @@
 - **Root Cause Diagnosis**: Multi-class classification for anomaly identification
 - **User-Friendly Interface**: Interactive GUI with configurable options
 - **Scalable Framework**: Modular design for extension to other isotope systems
-- **Expert-Validated**: Built on 27,000+ historical MC-ICP-MS measurements
+- **Expert-Validated**: Built on 26,000+ historical MC-ICP-MS measurements
 
 ## 📋 Table of Contents
 
@@ -66,7 +66,7 @@ pip install -r requirements.txt
 ```bash
 python src/main.py
 ```
-🏗️ Architecture
+## 🏗️ Architecture
 Hg-MC-Auto employs a three-tier architecture that transforms raw MC-ICP-MS data into quality-assured isotopic results:
 
 ![Overall Architecture Diagram](https://github.com/Yoko286/Hg-MC-Auto/blob/main/docs/Overall%20Architecture%20Diagram.png)
@@ -221,7 +221,7 @@ Accuracy	99.61%	99.84%
 F1-Score	0.9960	0.9909 (balanced)
 Recall (Normal)	99.8%	-
 AUC	0.999-1.0	-
-Based on validation with 27,942 historical measurements
+Based on validation with 26,218 historical measurements
 
 ## 📝 Citation
 If you use Hg-MC-Auto in your research, please cite:
