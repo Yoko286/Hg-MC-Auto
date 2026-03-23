@@ -10,6 +10,7 @@ xgboost==2.1.4
 PyAutoGUI==0.9.54
 PyGetWindow==0.0.9
 pyperclip==1.11.0
+keyboard==0.13.5
 openpyxl==3.0.10
 Pillow==11.2.1
 statsmodels==0.13.2

@@ -228,9 +228,9 @@ If you use Hg-MC-Auto in your research, please cite:
 
 bibtex
 @article{zhou2025selfdriving,
-  title={A Self-Driving Pipeline for Mercury Isotope Analysis: From Automated Data Acquisition to AI-Powered Quality Diagnosis},
+  title={A Data‑Driven, Post‑Acquisition Quality Diagnostic Pipeline for Isotope Analysis by MC-ICP-MS},
   author={Zhou, Chufan and Huang, Qiang and Tang, Yang and Zhong, Ying and Feng, Xinbin},
-  journal={AC},
+  journal={JAAS},
   year={2025},
   doi={10.xxxx/xxxxxx}
 }
