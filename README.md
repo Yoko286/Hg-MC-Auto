@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Yoko286/Hg-MC-Auto)](https://github.com/Yoko286/Hg-MC-Auto/stargazers)
 
-**Hg-MC-Auto** is a comprehensive, intelligent pipeline for automated mercury isotope analysis by MC-ICP-MS, integrating robotic data extraction, expert-informed quality control, and machine learning diagnostics.
+**Hg-MC-Auto** is a comprehensive, intelligent pipeline for automated mercury isotope analysis by MC-ICP-MS, integrating robotic data extraction, expert-informed quality control, and machine learning diagnostics. Online paper: https://doi.org/10.1039/D5JA00519A
 
 ![Graphic Abstract](https://github.com/Yoko286/Hg-MC-Auto/blob/main/docs/Graphic%20abstract.png)
 
@@ -19,14 +19,13 @@
 
 ## 📋 Table of Contents
 
-1. [Installation](#installation)
-2. [Quick Start](#quick-start)
-3. [Architecture](#architecture)
-4. [Project Structure](#project-structure)
-5. [Usage Guide](#usage-guide)
-6. [Models](#models)
-7. [Citation](#citation)
-8. [Contact](#contact)
+1. [Installation](https://github.com/Yoko286/Hg-MC-Auto?tab=readme-ov-file#-installation)
+2. [Architecture](https://github.com/Yoko286/Hg-MC-Auto?tab=readme-ov-file#%EF%B8%8F-architecture)
+3. [Project Structure](https://github.com/Yoko286/Hg-MC-Auto?tab=readme-ov-file#-project-structure)
+4. [Usage Guide](https://github.com/Yoko286/Hg-MC-Auto?tab=readme-ov-file#-usage-guide)
+5. [Models](https://github.com/Yoko286/Hg-MC-Auto?tab=readme-ov-file#-models)
+6. [Citation](https://github.com/Yoko286/Hg-MC-Auto?tab=readme-ov-file#-citation)
+7. [Contact](https://github.com/Yoko286/Hg-MC-Auto?tab=readme-ov-file#-contact)
 
 ## 🚀 Installation
 
@@ -101,7 +100,8 @@ Comprehensive reporting
 Hg-MC-Auto/
 │
 ├── data/                     # Sample datasets for testing
-│   └── tangyang.xlsx        # Model validation dataset
+│   ├── train dataset.xlsx             # Contact my email to get: zhouchufan@mail.gyig.ac.cn
+│   └── validation dataset.xlsx        # Model validation dataset
 │
 ├── docs/                     # Documentation and figures
 │
@@ -230,9 +230,9 @@ bibtex
 @article{zhou2025selfdriving,
   title={A Data‑Driven, Post‑Acquisition Quality Diagnostic Pipeline for Isotope Analysis by MC-ICP-MS},
   author={Zhou, Chufan and Huang, Qiang and Tang, Yang and Zhong, Ying and Feng, Xinbin},
-  journal={JAAS},
+  journal={Journal of Analytical Atomic Spectrometry},
   year={2025},
-  doi={10.xxxx/xxxxxx}
+  doi={10.1039/D5JA00519A}
 }
 ## 🤝 Contributing
 We welcome contributions! Please:
@@ -255,9 +255,13 @@ Questions: Check the Wiki or open a discussion
 Feature Requests: Submit via GitHub Issues with the "enhancement" label
 
 ## 📧 Contact
-State Key Laboratory of Environmental Geochemistry
-Institute of Geochemistry, Chinese Academy of Sciences
+Laboratory of Karst Environmental Evolution and Ecological Security, 
+Institute of Geochemistry, Chinese Academy of Sciences,
 Guiyang, Guizhou 550081, China
+
+We welcome experts from different laboratories to contribute their expertise 
+and make contributions to the intelligent geochemistry laboratory. 
+Welcome to join us and make a change together.
 
 Chufan Zhou:
 📧 zhouchufan@mail.gyig.ac.cn
